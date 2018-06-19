@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>한열의 세계로 오신 것을 환영합니다</title>
+<script>
+function login(f){
+	
+	var id = f.rid.value;
+	var c = confirm(id+"로 로그인 하시겠습니까?")
+	if(c==true){
+	f.method='post';
+	f.submit();
+	
+	}
+}
+</script>
+</head>
+<body>
+<h2>로그인 페이지입니다.</h2>
+<br><img src="img/login.JPG" width="100px" height="150px">
+<form action="login" method="post">
+<table>
+<tbody>
+<tr><td>Id</td><td><input type="text" name="rid"></td></tr>
+<tr><td>pwd</td><td><input type="password" name="rpwd"></td></tr>
+</tbody>
+</table>
+<input type="submit" 
+onclick="login(this.form);" value="login"><input type="reset" value="cancel">
+</form>
+</body>
+</html>
